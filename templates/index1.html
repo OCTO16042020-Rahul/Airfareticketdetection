@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+		<!-- font-awesome icons -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate-custom.css') }}">
+
+
+
+<!-- //js -->
+
+	<title>Air Fare Prediction Sysytem Sign -Up Page</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Travel Agency Sign In Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Custom-Styleheet-Links -->
+
+	<!-- //Custom-Styleheet-Links -->
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+	<!-- //Fonts -->
+
+</head>
+<!-- //Head -->
+
+
+
+<!-- Body -->
+<body>
+
+	<h2 class="w3layouts-agileits">air fare prediction system</h2>
+
+	<div class="container w3layouts agileits">
+
+		<div class="content-left w3layouts agileits">
+			<img src="{{url_for('static',filename='images/background.jpg')}}" alt="" class="img-responsive" />
+
+			<p>Plan your next dream trip. Select your destination and leave the rest to us.</p>
+
+		</div>
+
+		<div class="content-right w3layouts agileits">
+			<section>
+				<div id="container_demo">
+					<a class="hiddenanchor w3layouts agileits" id="tologin"></a>
+					<a class="hiddenanchor w3layouts agileits" id="toregister"></a>
+					<div id="wrapper">
+						<div id="login" class="animate w3layouts agileits form">
+							<h2 class="w3layouts agileits">Sign In</h2>
+							<form  action="/login1" autocomplete="on" method="post">
+								<label>E-mail</label>
+								<input type="text" Name="username" required="">
+								<label>Password</label>
+								<input type="password" Name="password" required="">
+								<div class="send-button w3layouts agileits">
+									<p><a href="#">Forgot Password?</a></p>
+
+											<input type="submit" value="Sign In">
+
+									<div class="clear"></div>
+								</div>
+								<p class="change_link w3layouts agileits">
+									Don't have an account? <a href="#toregister" class="to_register">Sign Up!</a>
+								</p>
+								<div class="clear"></div>
+							</form>
+							<div >
+
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div id="register" class="animate w3layouts agileits form">
+							<h2>Sign up</h2>
+							<form  action="/register" autocomplete="on" method="post">
+
+							        <label>Full name</label>
+									<input type="text" class="phone w3layouts agileits" Name="name" required="">
+									<label>Phone Number</label>
+									<input type="text" class="phone w3layouts agileits" Name="phone" required="">
+									<label>Username</label>
+									<input type="text" Name="username" required="">
+									<label>Password</label>
+									<input type="password" Name="password" required="">
+									<div class="send-button w3layouts agileits">
+
+													<input type="submit" value="Sign Up">
+
+									</div>
+								</form>
+								<p class="change_link w3layouts agileits">
+									Already a member? <a href="#tologin" class="to_register">Sign In</a>
+								</p>
+								<div class="clear"></div>
+							</form>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+
+</body>
+<!-- //Body -->
+
+</html>

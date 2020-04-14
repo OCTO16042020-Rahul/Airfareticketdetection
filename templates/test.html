@@ -1,0 +1,47 @@
+
+
+<table>
+    <thead>
+
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+{% include 'header.html' %}
+      <link rel="stylesheet" href="css/style7.css">
+     	<link rel="stylesheet" href="{{ url_for('static', filename='css/style7.css') }}">
+<div id="tableWrap">
+<table class="responstable" >
+    <tr>
+        <th>Airline</th>
+        <th>Date_of_Journey</th>
+             <th>Source</th>
+           <th>Destination</th>
+        <th>Route</th>
+             <th>Dep_Time</th>
+           <th>Arrival_Time</th>
+        <th>Duration</th>
+             <th>Total_Stops</th>
+          <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                     <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                     <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+                <td>{{row[8]}}</td>
+                  <td>{{row[9]}}</td>
+
+            </tr>
+        {% endfor %}
+
+
+    </tbody>
+</table>
+</div>

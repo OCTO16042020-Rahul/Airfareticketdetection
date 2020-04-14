@@ -1,0 +1,142 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fare Payment </title>
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Fare Payment Widget Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Meta tag Keywords -->
+
+<!-- css files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style6.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/creditly.css') }}">
+<!-- credit-card-CSS -->
+<!-- //css files -->
+
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<!--//online-fonts -->
+
+</head>
+<body>
+	<header>
+				<div class="container-fluid px-lg-5">
+			<nav class="py-4">
+                    <li class="mr-lg-4 mr-3 active"><a href="/">Logout</a></li>
+                            
+                    </nav>
+		</div>
+				<div class="container-fluid px-lg-5">
+			<nav class="py-4">
+                    <li class="mr-lg-4 mr-3 active"><a href="index.html">welcome {{mobile}}</a></li>
+                            
+                    </nav>
+		</div>	
+	</header>
+<div class="header">
+	<h1>Fare Payment Widget</h1>
+</div>
+
+<div class="w3-main">
+	<!-- Main -->
+	<div class="about-bottom">
+		<div class="w3l_about_bottom_left">
+			
+			<div class="book-form b2">
+				<div class="agile-form">
+				
+				
+				<div class="clear"></div>
+			    <form >
+				
+				</form>
+				
+				
+			</div>
+			</div>
+		</div>
+		<div class="w3l_about_bottom_right two">
+			<div class="book-form">
+				<h2 class="tittle">Payment Form</h2>
+			    <form action="/payment1" method="post" class="creditly-card-form agileinfo_form">
+				<section class="creditly-wrapper wthree, w3_agileits_wrapper">
+					<div class="form-date-w3-agileits">
+						<label> Name on Card:</label>
+						<input type="text" name="mobile" value="{{mobile}}" placeholder="Your Name" required="">
+						<input type="text" name="name" placeholder="Your Name" required="">
+					</div>
+					<div class="form-date-w3-agileits">
+						<label> Your Email :</label>
+						<input type="email" name="email" placeholder="Your Email" required="">
+					</div>
+					<div class="form-date-w3-agileits">
+						<label class="control-label">Card Number</label>
+						<input class="number credit-card-number form-control" type="text" name="number"
+							inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number"
+							placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+
+					</div>
+					<div class="form-date-w3-agileits">
+						<label> Expiration Date :</label>
+						<input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">		
+					</div>
+					<div class="form-date-w3-agileits">
+						<label> CVV Number :</label>
+						<input class="security-code form-control"Â·
+							inputmode="numeric"
+							type="text" name="security-code"
+							placeholder="&#149;&#149;&#149;">			
+					</div>
+					<div class="make wow shake">
+						  <input type="submit" name="submit" value="Pay Now">
+					</div>
+					</section>
+
+				</form>
+			</div>
+
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+</div>
+<!-- //Main -->
+ <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js')}}"></script>
+			 <script src="{{ url_for('static', filename='js/creditly.js')}}"></script>
+
+
+	<!-- js-scripts-->
+
+		<script type="text/javascript">
+			$(function() {
+			  var creditly = Creditly.initialize(
+				  '.creditly-wrapper .expiration-month-and-year',
+				  '.creditly-wrapper .credit-card-number',
+				  '.creditly-wrapper .security-code',
+				  '.creditly-wrapper .card-type');
+
+			  $(".creditly-card-form .submit").click(function(e) {
+				e.preventDefault();
+				var output = creditly.validate();
+				if (output) {
+				  // Your validated credit card output
+				  console.log(output);
+				}
+			  });
+			});
+		</script>
+	<!-- //credit-card -->
+
+	<!-- //js-scripts-->
+</body>
+</html>
